@@ -1,5 +1,8 @@
 import * as THREE from 'three'
 import Experience from '../Experience.js'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
+import helvetikerBold from '../../../static/fonts/helvetiker_bold.typeface.json'
 
 
 export default class RamenShop
@@ -101,6 +104,121 @@ export default class RamenShop
     addObjects()
     {
         this.hologramBaseGeometry = new THREE.CircleGeometry(.68, 32)
+
+        // Custom 3D text for Afifa Noor replacing Jesse Zhou
+        const fontLoader = new FontLoader()
+        const font = fontLoader.parse(helvetikerBold)
+
+        // Big roof sign "AFIFA\nNOOR"
+        const signGeo = new TextGeometry('AFIFA\nNOOR', {
+            font: font,
+            size: 2.0,
+            height: 0.05,
+            curveSegments: 4,
+            bevelEnabled: false,
+        })
+        signGeo.rotateX(-Math.PI / 2)
+        signGeo.center()
+        signGeo.translate(4.622, 0.0022, 0.754)
+
+        if(this.jesseZhouJoined) {
+            this.jesseZhouJoined.visible = false
+        }
+
+        // Solid pink button plate replacing jZhouPink stencil cutouts/barcode
+        const pinkPlateGeo = new THREE.BufferGeometry()
+        const pinkPlatePos = new Float32Array([
+            -0.0301, -0.3546, -0.3546,
+            -0.0301, -0.3546,  0.3546,
+            -0.0301,  0.3546,  0.3546,
+
+            -0.0301, -0.3546, -0.3546,
+            -0.0301,  0.3546,  0.3546,
+            -0.0301,  0.3546, -0.3546
+        ])
+        const pinkPlateNorm = new Float32Array([
+            -1, 0, 0,  -1, 0, 0,  -1, 0, 0,
+            -1, 0, 0,  -1, 0, 0,  -1, 0, 0
+        ])
+        const pinkPlateUv = new Float32Array([
+            0, 0,  1, 0,  1, 1,
+            0, 0,  1, 1,  0, 1
+        ])
+        pinkPlateGeo.setAttribute('position', new THREE.BufferAttribute(pinkPlatePos, 3))
+        pinkPlateGeo.setAttribute('normal', new THREE.BufferAttribute(pinkPlateNorm, 3))
+        pinkPlateGeo.setAttribute('uv', new THREE.BufferAttribute(pinkPlateUv, 2))
+
+        if(this.jZhouPink) {
+            this.jZhouPink.geometry.dispose()
+            this.jZhouPink.geometry = pinkPlateGeo
+        }
+
+        // Menu button "AFIFA" on the pink button
+        const btnGeo = new TextGeometry('AFIFA', {
+            font: font,
+            size: 0.11,
+            height: 0.01,
+            curveSegments: 3,
+            bevelEnabled: false,
+        })
+        btnGeo.rotateY(-Math.PI / 2)
+        btnGeo.center()
+        btnGeo.translate(-0.031, 0, 0)
+
+        if(this.jZhouBlack) {
+            this.jZhouBlack.geometry.dispose()
+            this.jZhouBlack.geometry = btnGeo
+        }
+
+        // Remove "JESSE'S RAMEN" neon tubes from neonPink geometry
+        if(this.neonPink && this.neonPink.geometry && this.neonPink.geometry.index) {
+            const geo = this.neonPink.geometry
+            const pos = geo.attributes.position
+            const idx = geo.index
+            const numTris = idx.count / 3
+            const newIndices = []
+            for (let i = 0; i < numTris; i++) {
+                const a = idx.getX(i * 3)
+                const b = idx.getX(i * 3 + 1)
+                const c = idx.getX(i * 3 + 2)
+
+                const cx = (pos.getX(a) + pos.getX(b) + pos.getX(c)) / 3
+                const cy = (pos.getY(a) + pos.getY(b) + pos.getY(c)) / 3
+                const cz = (pos.getZ(a) + pos.getZ(b) + pos.getZ(c)) / 3
+
+                if (!(cx >= -1.95 && cx <= 1.95 && cy >= -0.85 && cy <= -0.20 && cz > 0.15)) {
+                    newIndices.push(a, b, c)
+                }
+            }
+            const IndexClass = idx.constructor
+            const TypedArrayClass = idx.array.constructor
+            geo.setIndex(new IndexClass(new TypedArrayClass(newIndices), 1))
+        }
+
+        // Remove "JESSE'S RAMEN" letter casings and hanging wires from ramenShopJoined geometry
+        if(this.ramenShop && this.ramenShop.geometry && this.ramenShop.geometry.index) {
+            const geo = this.ramenShop.geometry
+            const pos = geo.attributes.position
+            const idx = geo.index
+            const numTris = idx.count / 3
+            const newIndices = []
+            for (let i = 0; i < numTris; i++) {
+                const a = idx.getX(i * 3)
+                const b = idx.getX(i * 3 + 1)
+                const c = idx.getX(i * 3 + 2)
+
+                const lx = (pos.getX(a) + pos.getX(b) + pos.getX(c)) / 3
+                const ly = (pos.getY(a) + pos.getY(b) + pos.getY(c)) / 3
+                const lz = (pos.getZ(a) + pos.getZ(b) + pos.getZ(c)) / 3
+
+                if (!(lx < 0.350 && lx >= 0.20 && ly >= -3.65 && ly <= -2.60 && lz >= -0.20 && lz <= 4.80)) {
+                    newIndices.push(a, b, c)
+                }
+            }
+            const IndexClass = idx.constructor
+            const TypedArrayClass = idx.array.constructor
+            geo.setIndex(new IndexClass(new TypedArrayClass(newIndices), 1))
+        }
     }
 
     setMaterials()

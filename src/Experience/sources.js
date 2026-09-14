@@ -13,8 +13,8 @@ export default [
     // Baked Textures
     {
         name: 'ramenShopBakedTexture',
-        type: 'KTX2Texture',
-        path: 'textures/baked/ramenShopBaked1024.ktx2'
+        type: 'texture',
+        path: 'textures/baked/ramenShopBaked1024.png'
     },
     {
         name: 'machinesBakedTexture',
@@ -24,8 +24,8 @@ export default [
 
     {
         name: 'floorBakedTexture',
-        type: 'KTX2Texture',
-        path: 'textures/baked/floorBaked1024.ktx2'
+        type: 'texture',
+        path: 'textures/baked/floorBaked1024.png'
     },
 
     {
@@ -68,20 +68,20 @@ export default [
     // Arcade Screens
     {
         name: 'arcadeScreenDefaultTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/arcadeScreens/arcadeScreenDefault.ktx2'
+        type: 'texture',
+        path: 'textures/screens/arcadeScreens/arcadeScreenDefault.png'
     },
 
     {
         name: 'arcadeScreenCreditsTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/arcadeScreens/arcadeScreenCredits.ktx2'
+        type: 'texture',
+        path: 'textures/screens/arcadeScreens/arcadeScreenCredits.png'
     },
 
     {
         name: 'arcadeScreenThanksTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/arcadeScreens/arcadeScreenThanks.ktx2'
+        type: 'texture',
+        path: 'textures/screens/arcadeScreens/arcadeScreenThanks.png'
     },
 
     // Easel
@@ -107,38 +107,38 @@ export default [
 
     {
         name: 'bigScreenAboutMeTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenAbout.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenAbout.png'
     },
 
     {
         name: 'bigScreenSkillsTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenSkills.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenSkills.png'
     },
 
     {
         name: 'bigScreenExperienceTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenExperience.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenExperience.png'
     },
 
     {
         name: 'bigScreenAboutMeMobileTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenAboutMobile.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenAboutMobile.png'
     },
 
     {
         name: 'bigScreenSkillsMobileTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenSkillsMobile.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenSkillsMobile.png'
     },
 
     {
         name: 'bigScreenExperienceMobileTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenExperienceMobile.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenExperienceMobile.png'
     },
 
     // Projects
@@ -150,146 +150,146 @@ export default [
 
     {
         name: 'vendingMachineMenuTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/vendingMachineMenu.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/vendingMachineMenu.png'
     },
 
 
     {
         name: 'project1Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project1.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project1.png'
     },
 
     {
         name: 'project2Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project2.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project2.png'
     },
 
     {
         name: 'project3Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project3.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project3.png'
     },
 
     {
         name: 'project4Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project4.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project4.png'
     },
 
     {
         name: 'project5Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project5.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project5.png'
     },
 
     {
         name: 'project6Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project6.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project6.png'
     },
 
     {
         name: 'project7Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project7.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project7.png'
     },
 
     {
         name: 'project8Texture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/vendingMachineScreens/project8.ktx2'
+        type: 'texture',
+        path: 'textures/screens/vendingMachineScreens/project8.png'
     },
 
 
-    // Videos
+    // Billboard Screens (Static)
     {
         name: 'littleTVScreenVideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/littleTVScreen.mp4'
+        type: 'texture',
+        path: 'textures/billboards/littleTVScreen.png'
     },
     {
         name: 'tallScreenVideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/tallScreen.mp4'
+        type: 'texture',
+        path: 'textures/billboards/tallScreen.png'
     },
     {
         name: 'tvScreenVideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/tvScreen.mp4'
+        type: 'texture',
+        path: 'textures/billboards/tvScreen.png'
     },
     {
         name: 'smallScreen5VideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/smallScreen5.mp4'
+        type: 'texture',
+        path: 'textures/billboards/smallScreen5.png'
     },
     {
         name: 'smallScreen4VideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/smallScreen4.mp4'
+        type: 'texture',
+        path: 'textures/billboards/smallScreen4.png'
     },
     {
         name: 'smallScreen3VideoTexture',
-        type: 'videoTexture',
-        path: 'textures/videosTextures/smallScreen3.mp4'
+        type: 'texture',
+        path: 'textures/billboards/smallScreen3.png'
     },
 
     // smallScreen1 carousel
 
     {
         name: 'smallScreenOne1',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen1/1.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen1/1.png'
     },
     {
         name: 'smallScreenOne2',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen1/2.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen1/2.png'
     },
     {
         name: 'smallScreenOne3',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen1/3.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen1/3.png'
     },
     {
         name: 'smallScreenOne4',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen1/4.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen1/4.png'
     },
     {
         name: 'smallScreenOne5',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen1/5.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen1/5.png'
     },
 
     // smallScreen2 carousel
 
     {
         name: 'smallScreenTwo1',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen2/1.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen2/1.png'
     },
     {
         name: 'smallScreenTwo2',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen2/2.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen2/2.png'
     },
     {
         name: 'smallScreenTwo3',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen2/3.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen2/3.png'
     },
     {
         name: 'smallScreenTwo4',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen2/4.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen2/4.png'
     },
     {
         name: 'smallScreenTwo5',
-        type: 'basisTexture',
-        path: 'textures/screens/smallScreen2/5.basis'
+        type: 'texture',
+        path: 'textures/screens/smallScreen2/5.png'
     },
 
     // sideScreen

@@ -88,25 +88,17 @@ export default class Materials
 
         this.sideScreenMaterial = this.getSideScreenShaderMaterial(this.resources.items.sideScreen1Texture)
 
-        // Map video textures
-
-        // https://discourse.threejs.org/t/basis-video-texture/12716/2
-
-        this.littleTVScreenVideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.littleTVScreenVideoTexture, new THREE.Color("rgb(0, 255, 0)"));
-        this.tallScreenVideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.tallScreenVideoTexture, new THREE.Color("rgb(0, 255, 0)"));
-        this.tvScreenVideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.tvScreenVideoTexture, new THREE.Color("rgb(0, 255, 0)"));
+        // Map billboard static screen textures
+        this.littleTVScreenVideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.littleTVScreenVideoTexture })
+        this.tallScreenVideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.tallScreenVideoTexture })
+        this.tvScreenVideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.tvScreenVideoTexture })
 
         this.smallScreen1Material = this.getTransitionShaderMaterial(this.resources.items.smallScreenOne1)
         this.smallScreen2Material = this.getTransitionShaderMaterial(this.resources.items.smallScreenTwo1)
 
-        this.smallScreen3VideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.smallScreen3VideoTexture, new THREE.Color("rgb(0, 255, 0)"));
-        this.smallScreen4VideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.smallScreen4VideoTexture, new THREE.Color("rgb(0, 255, 0)"));
-        this.smallScreen5VideoMaterial = this.getChromaKeyShaderMaterial(this.resources.items.smallScreen5VideoTexture, new THREE.Color("rgb(0, 255, 0)"));
-        
-        // play the videos
-        for ( let i = 0; i < Object.keys(this.resources.video).length; i ++ ) {
-            this.resources.video[Object.keys(this.resources.video)[i]].play()
-        }
+        this.smallScreen3VideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.smallScreen3VideoTexture })
+        this.smallScreen4VideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.smallScreen4VideoTexture })
+        this.smallScreen5VideoMaterial = new THREE.MeshBasicMaterial({ map: this.resources.items.smallScreen5VideoTexture })
 
         // Shader Materials
 

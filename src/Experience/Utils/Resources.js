@@ -77,6 +77,12 @@ export default class Resources extends EventEmitter
                         file.flipY = false
                         file.encoding = THREE.sRGBEncoding
                         this.sourceLoaded(source, file)
+
+                        if(source.path.includes("smallScreen1"))
+                        {this.carousel1.push(file)}
+
+                        if(source.path.includes("smallScreen2"))
+                        {this.carousel2.push(file)}
                     }
                 )
             }

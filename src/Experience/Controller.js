@@ -233,7 +233,7 @@ export default class Controller
                 this.sounds.playClick()
                 this.menuControls.buttonIndicator(obj, color)
                 await this.sleep(250)
-                window.open('https://medium.com/@jesse-zhou', '_blank')
+                window.open('https://www.linkedin.com/in/afifa-noor-20925b334', '_blank')
             }
         }
         this.menuControls.aboutMe = async (obj, color) =>
@@ -497,22 +497,18 @@ export default class Controller
 
         this.videoControls.littleTVScreen = async () =>
         {
-            this.videoControls.togglePlayback(this.resources.video['littleTVScreenVideoTexture'])
+            this.sounds.playBloop()
         }
 
         this.videoControls.tallScreen = async () =>
         {
-            this.videoControls.togglePlayback(this.resources.video['tallScreenVideoTexture'])
+            this.sounds.playBloop()
         }
 
         this.videoControls.tvScreen = async () =>
         {
-            if(this.resources.video['tvScreenVideoTexture'].paused)
-            {this.resources.video['tvScreenVideoTexture'].play()}
-            else {
-                window.open('https://www.youtube.com/watch?v=fYcphQibLek', '_blank');
-                this.resources.video['tvScreenVideoTexture'].pause()
-            }
+            this.sounds.playBloop()
+            window.open('https://github.com/afifa2004', '_blank');
         }
 
         this.videoControls.sideScreen = async () =>
@@ -556,17 +552,17 @@ export default class Controller
 
         this.videoControls.smallScreen3 = async () =>
         {
-            this.videoControls.togglePlayback(this.resources.video['smallScreen3VideoTexture'])
+            this.sounds.playBloop()
         }
 
         this.videoControls.smallScreen4 = async () =>
         {
-            this.videoControls.togglePlayback(this.resources.video['smallScreen4VideoTexture'])
+            this.sounds.playBloop()
         }
 
         this.videoControls.smallScreen5 = async () =>
         {
-            this.videoControls.togglePlayback(this.resources.video['smallScreen5VideoTexture'])
+            this.sounds.playBloop()
         }
 
         this.videoControls.togglePlayback = async (video) =>
@@ -587,7 +583,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://twitter.com/Jessezhouu', '_blank');
+                window.open('https://x.com/AfifaNoorifyh', '_blank');
             }
             
         }
@@ -596,7 +592,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://www.linkedin.com/in/jessezhou1998', '_blank');
+                window.open('https://www.linkedin.com/in/afifa-noor-20925b334', '_blank');
             }
             
         }
@@ -605,7 +601,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://github.com/enderh3art', '_blank');
+                window.open('https://github.com/afifa2004', '_blank');
             }
             
         }
@@ -614,7 +610,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://medium.com/@jesse-zhou', '_blank');
+                window.open('https://www.linkedin.com/in/afifa-noor-20925b334', '_blank');
             }
             
         }
@@ -623,7 +619,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.location.href='mailto:jessezhouu@gmail.com'
+                window.location.href='mailto:afifanoor2006@gmail.com'
             }
             
         }

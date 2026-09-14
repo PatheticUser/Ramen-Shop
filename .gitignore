@@ -1,2 +1,45 @@
-.vercel
-node_modules
+# Dependencies
+node_modules/
+
+# Production build
+dist/
+
+# Vercel deployment
+.vercel/
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache & virtualenvs
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.uv/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Scratch / Temporary test images
+*.raw
+check_*.png
+test_*.png
+thumb_*.png
+sign_*.png
+decoded_*/
